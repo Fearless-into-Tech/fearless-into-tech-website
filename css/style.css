@@ -283,6 +283,16 @@ i.fa.fa-bars {
   color: var(--white);
 }
 
+.contribute-text-3 a {
+  text-decoration: none; 
+  font-weight: bold;
+  color: var(--blue);
+}
+    
+.contribute-text-3 a:hover {
+  text-decoration: underline; 
+}
+
 .span,
 .team-icon {
   color: var(--lightSeaGreen);
