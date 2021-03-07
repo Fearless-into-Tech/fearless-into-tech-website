@@ -13,8 +13,8 @@ const typed = new Typed('#typed',{
   strings: [
     '^1000',
     '<span>M</span>OTIVATING',
-    '<span>I</span>MPORWERING',
-  "<span>D</span>RIVING CHANGES"
+    '<span>E</span>MPORWERING',
+  "<span>D</span>RIVING CHANGE"
   ],
   backSpeed: 40,
   typeSpeed: 40,
