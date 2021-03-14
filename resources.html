@@ -1,149 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
     <!--Import Font Awesome-->
-    <script src="https://kit.fontawesome.com/3a514e6805.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3a514e6805.js"
+      crossorigin="anonymous"
+    ></script>
     <!--Import Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,600&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <!--Linking the HTML and CSS files-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Fearless Into Tech</title>
-    <link rel="icon" type="image/png" href="./images/FIT_Black.png">
-</head>
+    <link rel="icon" type="image/png" href="./images/FIT_Black.png" />
+  </head>
 
-<body>
-    <div class="container-fluid" id="nav">
-        <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                <img src="./images/FIT_Black.EmailSignaturesize.png" alt="logo's fearless into tech" class="logo">
-            </div>
-            <!-- Top Navigation Menu -->
-            <div class="col-xs-6 col-sm-6 col-md-9 col-lg-6 topnav">
-                <a class="back" href="./index.html" class="active"></a>
-                <!-- Navigation links (hidden by default) -->
-                <div class="nav-links" id="myLinks">
-                    <a class="back" href="./index.html" class="active">HOME</a>
-                    <a href="./about.html">WHAT WE DO</a>
-                    <a href="./team.html">TEAM</a>
-                    <a href="./contribute.html">CONTRIBUTE</a>
-                </div>
-                <!--"Hamburger menu" / "Bar icon" to toggle the navigation links-->
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+  <body>
+    <nav>
+      <img
+        class="logo"
+        src="./images/logo.svg"
+        height="32"
+        alt="logo's fearless into tech"
+      />
+      <div class="menu">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./about.html">What we do</a></li>
+          <li><a href="./team.html">Who we are</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+        </ul>
+      </div>
+      <a href="#" class="hamburger">
+        <div>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-
+      </a>
+    </nav>
     <div class="container-fluid resources">
-        <div class="row">
-            <div class="col-10">
-                <h2 class="resource-subtitle">Resources</h2>
-                <p class="text-center"><strong>We will add learning resources soon</strong>
-                <p>
-            </div>
+      <div class="row">
+        <div class="col-10">
+          <h2 class="resource-subtitle">Resources</h2>
+          <p class="text-center">
+            <strong>We will add learning resources soon</strong>
+          </p>
+          <p></p>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Front-End</h5>
-                        <p class="card-text">CSS</p>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Front-End</h5>
+              <p class="card-text">CSS</p>
 
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
+              <a href="#" class="btn btn-primary">Information</a>
             </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Front-End</h5>
-                        <p class="card-text">Javascript</p>
-
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Back-End</h5>
-                        <p class="card-text">Node</p>
-
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Design</h5>
-                        <p class="card-text">UX Design</p>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Front-End</h5>
+              <p class="card-text">Javascript</p>
 
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
+              <a href="#" class="btn btn-primary">Information</a>
             </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Javascript</h5>
-                        <p class="card-text">React</p>
-
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Javascript</h5>
-                        <p class="card-text">Vue</p>
-
-                        <a href="#" class="btn btn-primary">Information</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Back-End</h5>
+              <p class="card-text">Node</p>
+
+              <a href="#" class="btn btn-primary">Information</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Design</h5>
+              <p class="card-text">UX Design</p>
+
+              <a href="#" class="btn btn-primary">Information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Javascript</h5>
+              <p class="card-text">React</p>
+
+              <a href="#" class="btn btn-primary">Information</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Javascript</h5>
+              <p class="card-text">Vue</p>
+
+              <a href="#" class="btn btn-primary">Information</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container-fluid session-join-learning-circle">
-        <div class="row">
-            <div class="col-8 resources-text">
-                <h6>"No matter what your starting point is, as long as you persevere – you will learn, and
-                    you will
-                    succeed.”</h6>
-                <p>Kira Radinsky, Computer Scientist</p>
-            </div>
+      <div class="row">
+        <div class="col-8 resources-text">
+          <h6>
+            "No matter what your starting point is, as long as you persevere –
+            you will learn, and you will succeed.”
+          </h6>
+          <p>Kira Radinsky, Computer Scientist</p>
         </div>
+      </div>
     </div>
     <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 col-sm">
-                    <h4><strong>Contact us:</strong></h4>
-                    <p>fearlessintotech@gmail.com</p>
-                </div>
-                <div class="col-6 col-sm socials">
-                    <a href="https://www.facebook.com/fearlessintotech" target="_blank">
-                        <i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/fearless-into-tech/" target="_blank">
-                        <i class="fab fa-linkedin"></i><a>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 col-sm">
+            <h4><strong>Contact us:</strong></h4>
+            <p>fearlessintotech@gmail.com</p>
+          </div>
+          <div class="col-6 col-sm socials">
+            <a href="https://www.facebook.com/fearlessintotech" target="_blank">
+              <i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/fearless-into-tech/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
