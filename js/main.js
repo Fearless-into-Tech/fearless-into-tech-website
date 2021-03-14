@@ -1,25 +1,14 @@
-/*navBar*/
-function myFunction() {
-  const x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector(".menu");
 
-/*TypeJs on home page */
-const typed = new Typed('#typed',{
-  strings: [
-    '^1000',
-    '<span>M</span>OTIVATING',
-    '<span>E</span>MPOWERING',
-  "<span>D</span>RIVING CHANGE"
-  ],
+hamburger.onclick = function () {
+  hamburger.classList.toggle("open");
+  menu.classList.toggle("open");
+};
+
+const typed = new Typed("#typed", {
+  strings: ["Motivating", "Empowering", "Driving Change"],
   backSpeed: 40,
   typeSpeed: 40,
-  smartBackspace: true
+  loop: true,
 });
-
-
-
