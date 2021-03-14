@@ -34,19 +34,29 @@ body {
   --lightSeaGreen: #23b5b5;
   --grey: #f1f1f1;
   --blue: #104c90;
+  --navHeight: 56px;
 }
 
 /***************NAVBAR****************/
 nav {
+  position: fixed;
+  background-color: var(--white);
+  width: 100%;
   display: flex;
   align-content: center;
+  height: var(--navHeight);
+}
+
+nav img.logo {
+  z-index: 1;
+  margin: 12px 24px;
 }
 
 nav .hamburger {
+  z-index: 1;
   margin-left: auto;
-  height: 56px;
-  width: 56px;
-  position: fixed;
+  height: var(--navHeight);
+  width: var(--navHeight);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,20 +64,16 @@ nav .hamburger {
   right: 0;
 }
 
-nav .hamburger:hover {
-  background-color: var(--grey);
-}
 nav .hamburger div span {
   display: block;
   width: 24px;
-  height: 4px;
+  height: 2px;
   background-color: var(--black);
-  margin-bottom: 4px;
-  border-radius: 4px;
+  margin: 4px;
 }
 
-nav .hamburger:hover div span:first-of-type {
-  width: 1em;
+nav .hamburger:hover div span:last-of-type {
+  width: 12px;
 }
 
 nav .menu {
@@ -90,107 +96,21 @@ nav .menu ul {
   text-align: center;
 }
 
+nav .menu ul li {
+    margin: 1.2em;
+}
+
 nav .menu ul li a {
   color: var(--black);
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 1.2em;
   font-size: 1.1rem;
-}
-
-nav .menu a {
-  display: grid;
-  margin-left: 2px;
-  padding: 0;
-}
-
-a .icon {
-  background-color: var(--white);
-  padding: 1.5em;
-  display: flex;
-  align-items: flex-end;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-.topnav {
-     overflow: hidden;
-    background-color: var(--white);
-     position: sticky;
-    
-  }
-  
-  */
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: inline;
-  text-align: right;
-  margin-right: 0;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  padding-right: 0.5em;
-  padding-top: 3em;
-  margin: 0 auto;
-  text-decoration: none;
-  font-weight: 600;
-  display: block;
-  color: var(--strongGrey);
-  display: inline-flex;
-  font-weight: 700;
-}
-.topnav a:hover {
-  color: var(--lightSeaGreen);
-}
-
-i.fa.fa-bars {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: #0a0a0a;
-  cursor: pointer;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: none;
-  line-height: 1;
-  list-style: outside none none;
-  margin: 0.5em auto;
-  padding: 0.5em;
-  text-align: right;
-  text-decoration: none;
-  text-rendering: auto;
-  background: var(--black);
-  color: var(--lightSeaGreen) !important;
-  left: 0em;
-  top: 1em;
-}
-
-/*
-  #mylinks .icon {
-  background: var(--black);
-    color: var(--lightSeaGreen);
-    padding: 1em;
-    left: 1.5em;
-    top: 1em; 
-    position:relative;
-    display: none;
-    }
-  */
-
-/*background color on mouse-over */
-
-.logo {
-  max-height: 30px;
-  padding: 10px 20px;
 }
 
 /*******Header Session******/
 header {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
-    url(../images/women-on-laptops-around-table.jpg);
+  background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url(../images/women-on-laptops-around-table.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
