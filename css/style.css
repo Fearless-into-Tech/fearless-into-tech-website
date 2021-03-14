@@ -25,7 +25,6 @@ body {
   line-height: 1.6;
 }
 
-/*******Colours******/
 :root {
   --white: #ffffff;
   --black: #1c1c1c;
@@ -97,7 +96,7 @@ nav .menu ul {
 }
 
 nav .menu ul li {
-    margin: 1.2em;
+  margin: 1.2em;
 }
 
 nav .menu ul li a {
@@ -106,6 +105,11 @@ nav .menu ul li a {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.1rem;
+}
+
+nav .menu ul li a:hover,
+nav .menu ul li a.active {
+  color: var(--lightSeaGreen);
 }
 
 /*******Header Session******/
