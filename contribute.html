@@ -1,107 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
     <!--Import Font Awesome-->
-    <script src="https://kit.fontawesome.com/3a514e6805.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3a514e6805.js"
+      crossorigin="anonymous"
+    ></script>
     <!--Import Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,600&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <!--Linking the HTML and CSS files-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>Fearless Into Tech</title>
-    <link rel="icon" type="image/png" href="./images/FIT_Black.png">
-</head>
+    <link rel="icon" type="image/png" href="./images/FIT_Black.png" />
+  </head>
 
-<body>
-    <div class="container-fluid" id="nav">
-        <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6">
-                <img src="./images/FIT_Black.EmailSignaturesize.png" alt="logo's fearless into tech" class="logo">
-            </div>
-            <!-- Top Navigation Menu -->
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-6 topnav">
-                <a class="back" href="./index.html" class="active"></a>
-                <!-- Navigation links (hidden by default) -->
-                <div class="nav-links" id="myLinks">
-                    <a class="back" href="./index.html" class="active">HOME</a>
-                    <a href="./about.html">WHAT WE DO</a>
-                    <a href="./team.html">TEAM</a>
-                    <a href="#contribute.html">CONTRIBUTE</a>
-                </div>
-                <!--"Hamburger menu" / "Bar icon" to toggle the navigation links-->
-
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+  <body>
+    <nav>
+      <img
+        class="logo"
+        src="./images/logo.svg"
+        height="32"
+        alt="logo's fearless into tech"
+      />
+      <div class="menu">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./about.html">What we do</a></li>
+          <li><a href="./team.html">Who we are</a></li>
+          <li><a href="./contribute.html" class="active">Contribute</a></li>
+        </ul>
+      </div>
+      <a href="#" class="hamburger">
+        <div>
+          <span></span>
+          <span></span>
         </div>
-    </div>
+      </a>
+    </nav>
     <div class="container-fluid contribute-session" id="contribute">
-        <div class="row">
-            <div class="col-sm contribute-picture-1">
-            </div>
-            <div class="col-sm contribute-text-1 text">
-                <h2>Donate resources</h2>
-                <p>We are constantly looking for free learning resources, certification possibilities and hand on
-                    opportunities for our community, as well as for supporting working software (from Office to Slack)
-                    for our association - please reach out to:
-                    <br>
-                    <span class="span">fearlessintotech@gmail.com</span>
-                </p>
-            </div>
+      <div class="row">
+        <div class="col-sm contribute-picture-1"></div>
+        <div class="col-sm contribute-text-1 text">
+          <h2>Donate resources</h2>
+          <p>
+            We are constantly looking for free learning resources, certification
+            possibilities and hand on opportunities for our community, as well
+            as for supporting working software (from Office to Slack) for our
+            association - please reach out to:
+            <br />
+            <span class="span">fearlessintotech@gmail.com</span>
+          </p>
         </div>
-        <div class="row">
-            <div class="col-sm contribute-text-2 text">
-                <h2>Donate time</h2>
-                <p>Our learning circles are self organised and self taught entities of max 5 participants each. We are
-                    looking for mentors who can guide them along their learning path and help them overcome their
-                    learning related challenges. If you are a python or web development expert and want to share your
-                    knowledge with a highly motivated and international community, please reach out
-                    to:<br>
-                    <span class="span">fearlessintotech@gmail.com</span>
-                </p>
-            </div>
-            <div class="col-sm contribute-picture-2">
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-sm contribute-text-2 text">
+          <h2>Donate time</h2>
+          <p>
+            Our learning circles are self organised and self taught entities of
+            max 5 participants each. We are looking for mentors who can guide
+            them along their learning path and help them overcome their learning
+            related challenges. If you are a python or web development expert
+            and want to share your knowledge with a highly motivated and
+            international community, please reach out to:<br />
+            <span class="span">fearlessintotech@gmail.com</span>
+          </p>
         </div>
-        <div class="row">
-            <div class="col-sm contribute-picture-3">
-            </div>
-            <div class="col-sm contribute-text-3 text">
-                <h2>Share your knowledge</h2>
-                <p>We are constantly looking for diverse role models, to share their knowledge with our community. In our webinar series <a href="https://www.youtube.com/playlist?list=PLuEUvW5S06LeH9zfkOpBrQDPd0sce1bnG" target="_blank">“What the tech?...”</a>, we are joined every month by female professionals working in different areas of the tech sector. By sharing their knowledge and insights, they actively contribute to making the sector more accessible to all. Do you want to share your knowledge? Don't hesitate to contact us!</p>
-            </div>
+        <div class="col-sm contribute-picture-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm contribute-picture-3"></div>
+        <div class="col-sm contribute-text-3 text">
+          <h2>Share your knowledge</h2>
+          <p>
+            We are constantly looking for diverse role models, to share their
+            knowledge with our community. In our webinar series
+            <a
+              href="https://www.youtube.com/playlist?list=PLuEUvW5S06LeH9zfkOpBrQDPd0sce1bnG"
+              target="_blank"
+              >“What the tech?...”</a
+            >, we are joined every month by female professionals working in
+            different areas of the tech sector. By sharing their knowledge and
+            insights, they actively contribute to making the sector more
+            accessible to all. Do you want to share your knowledge? Don't
+            hesitate to contact us!
+          </p>
         </div>
+      </div>
     </div>
     <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm">
-                    <h4><strong>Contact us:</strong></h4>
-                    <p>fearlessintotech@gmail.com</p>
-                </div>
-                <div class="col-sm socials">
-                    <a href="https://www.facebook.com/fearlessintotech" target="_blank">
-                        <i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/fearless-into-tech/" target="_blank">
-                        <i class="fab fa-linkedin"></i></a>
-                </div>
-                <div class="col-sm">
-                    <a href="https://twitter.com/leilas22" target="_blank"><br>
-                        <p class="madebyleila">Made by Leila dos Santos @2021</p>
-                    </a>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <h4><strong>Contact us:</strong></h4>
+            <p>fearlessintotech@gmail.com</p>
+          </div>
+          <div class="col-sm socials">
+            <a href="https://www.facebook.com/fearlessintotech" target="_blank">
+              <i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/fearless-into-tech/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="col-sm">
+            <a href="https://twitter.com/leilas22" target="_blank"
+              ><br />
+              <p class="madebyleila">Made by Leila dos Santos @2021</p>
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
