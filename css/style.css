@@ -1,4 +1,26 @@
-/*******General Rules******/
+:root {
+  --white: #ffffff;
+  --black: #1c1c1c;
+  --strongGrey: #5e5d5d;
+  --sherpaBlue: #084c61;
+  --lightSeaGreen: #23b5b5;
+  --grey: #f1f1f1;
+  --blue: #104c90;
+  --navHeight: 56px;
+  --mobileSpacing: 2.1rem;
+  --mobileSpacing2x: 4.2rem;
+  --tabletSpacing: 5rem;
+  --tabletSpacing2x: 8rem;
+  --desktopSpacing: 8rem;
+  --desktopSpacing2x: 8rem;
+  --lineHeight: 1.6;
+  /* --breakpointPhone: 375px;
+  --breakpointTablet: 768px;
+  --breakpointDesktop: 1024px;
+  --breakpointDesktop2x: 1280px; */
+}
+
+/* #region globals */
 *,
 *::before,
 *::after {
@@ -22,21 +44,40 @@ body {
   padding: 0;
   overflow-x: hidden;
   text-align: left;
-  line-height: 1.6;
+  line-height: var(--lineHeight);
 }
 
-:root {
-  --white: #ffffff;
-  --black: #1c1c1c;
-  --strongGrey: #5e5d5d;
-  --sherpaBlue: #084c61;
-  --lightSeaGreen: #23b5b5;
-  --grey: #f1f1f1;
-  --blue: #104c90;
-  --navHeight: 56px;
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-/***************NAVBAR****************/
+h3 {
+  font-size: 2rem;
+  padding-top: 1em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-right: 0.6em;
+}
+
+/* #endregion */
+
+/* #region nav */
 nav {
   position: fixed;
   background-color: var(--white);
@@ -134,42 +175,50 @@ nav .menu ul li a.active {
     display: none;
   }
 }
-/*******Header Session******/
-header {
+
+/* #endregion */
+
+/* #region hero */
+section.hero {
   background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
     url(../images/women-on-laptops-around-table.jpg);
-  height: 100vh;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 auto;
+  height: calc(100vh - var(--navHeight));
+  margin: var(--navHeight) auto 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.hero-heading h2 {
+section.hero p {
+  display: flex;
+  flex-direction: column;
   color: var(--white);
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 600;
+  text-transform: capitalize;
+  padding: var(--mobileSpacing2x) var(--mobileSpacing);
+  width: 100%;
 }
 
-.hero-heading span {
-  color: var(--lightSeaGreen);
-  font-size: 5rem;
-  font-weight: 800;
-  padding: 0;
-  padding-right: 2px;
-  display: none;
+@media screen and (min-width: 768px) {
+  section.hero p {
+    font-size: 3rem;
+    padding: var(--tabletSpacing2x) var(--tabletSpacing);
+  }
 }
 
-.hero-heading {
-  text-align: left;
-  padding-left: 7em;
-  padding-top: 10em;
-  margin: 0 auto;
-  display: inline-block;
+@media screen and (min-width: 1024px) {
+  section.hero p {
+    font-size: 4rem;
+    padding: var(--desktopSpacing2x) var(--desktopSpacing);
+  }
 }
 
-/*-----------------------Start----------------------------*/
-/*-------------------/***HEADER_BTN***-----------*/
+/* #endregion */
+
+/* #region legacy */
 .btn-learn-more {
   padding: 3em 2em;
   text-align: left;
@@ -190,51 +239,9 @@ header {
   font-size: 1.2rem;
 }
 
-.btn a:hoverm {
+.btn a:hover {
   background-color: var(--lightSeaGreen);
   color: var(--black);
-}
-/*---------------------------------------------------*/
-
-/*-----------------------Start----------------------------*/
-/*-------------------/***@MediaQuery on Header Session***-----------*/
-@media only screen and (max-width: 827px) {
-  /* For mobile phones: */
-  [class="col-"] {
-    width: 90%;
-  }
-
-  i.fa.fa-bars {
-    display: inline;
-    margin: 2em auto;
-  }
-
-  /**********/
-  .mission,
-  .team-content,
-  .resources {
-    width: 90%;
-    padding-left: 1em;
-    margin: 0 auto;
-  }
-
-  .hero-heading h2 {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .hero-heading span {
-    color: var(--lightSeaGreen);
-    font-size: 3rem;
-    font-weight: 800;
-  }
-
-  .hero-heading {
-    padding-left: 1em;
-    padding-bottom: 5em;
-    margin: 0 auto;
-    display: inline-block;
-  }
 }
 
 @media all and (max-width: 30em) {
@@ -243,10 +250,17 @@ header {
     margin: 0.2em auto;
   }
 }
-/*---------------------------/****End @MediaQuery****----------------*/
 
-/*-------------------------------------------------------------------*/
-/*------------/Start***BackgroundColors and FontColours***-----------*/
+@media only screen and (max-width: 827px) {
+  .mission,
+  .team-content,
+  .resources {
+    width: 90%;
+    padding-left: 1em;
+    margin: 0 auto;
+  }
+}
+
 .section-1,
 .session-join-learning-circle,
 .events {
@@ -491,38 +505,6 @@ footer {
   margin-top: 1em;
 }
 
-/*--------------------------End----------------------*/
-
-/*---------------------------------------------------*/
-/*-------------------******Typography*********--------*/
-h2 {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 2rem;
-  padding-top: 1em;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 1.7rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-p {
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  margin-right: 0.6em;
-}
-
 .resources-text p,
 .event-text p {
   text-align: center;
@@ -567,6 +549,4 @@ p {
 }
 /*---------------------------------------------------*/
 
-#typed {
-  color: var(--white);
-}
+/* #endregion */

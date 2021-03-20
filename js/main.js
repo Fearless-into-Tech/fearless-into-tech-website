@@ -7,8 +7,6 @@ hamburger.onclick = function () {
 };
 
 const typed = new Typed("#typed", {
-  strings: ["Motivating", "Empowering", "Driving Change"],
-  backSpeed: 40,
-  typeSpeed: 40,
-  loop: true,
+  strings: ["Motivating <br />Empowering <br /> Driving Change"],
+  typeSpeed: 50
 });
