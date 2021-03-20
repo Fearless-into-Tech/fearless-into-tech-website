@@ -3,7 +3,9 @@
   --black: #1c1c1c;
   --strongGrey: #5e5d5d;
   --sherpaBlue: #084c61;
-  --lightSeaGreen: #23b5b5;
+  --sherpaBlueLight: #0a5d76;
+  --sherpaBlueDark: #073f50;
+  --teal: #23b5b5;
   --grey: #f1f1f1;
   --blue: #104c90;
   --navHeight: 56px;
@@ -72,9 +74,54 @@ p {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-right: 0.6em;
+  max-width: 65ch;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.padded {
+  padding: var(--mobileSpacing2x) var(--mobileSpacing);
+}
+
+.padded .content {
+  width: 65ch;
+}
+
+@media screen and (min-width: 768px) {
+  .padded {
+    padding: var(--tabletSpacing2x) var(--tabletSpacing);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .padded {
+    padding: var(--desktopSpacing2x) var(--desktopSpacing);
+  }
+}
+
+.sherpaBlue {
+  background-color: var(--sherpaBlue);
+  color: var(--white);
+}
+
+.sherpaBlueLight {
+  background-color: var(--sherpaBlueLight);
+  color: var(--white);
+}
+
+.sherpaBlueDark {
+  background-color: var(--sherpaBlueDark);
+  color: var(--white);
+}
+
+.teal {
+  background-color: var(--teal);
+  color: var(--white);
+}
 /* #endregion */
 
 /* #region nav */
@@ -150,7 +197,7 @@ nav .menu ul li a {
 
 nav .menu ul li a:hover,
 nav .menu ul li a.active {
-  color: var(--lightSeaGreen);
+  color: var(--teal);
 }
 
 @media only screen and (min-width: 780px) {
@@ -186,9 +233,7 @@ section.hero {
   background-position: center;
   height: calc(100vh - var(--navHeight));
   margin: var(--navHeight) auto 0;
-  display: flex;
   align-items: flex-end;
-  justify-content: center;
 }
 
 section.hero p {
@@ -198,21 +243,56 @@ section.hero p {
   font-size: 2rem;
   font-weight: 600;
   text-transform: capitalize;
-  padding: var(--mobileSpacing2x) var(--mobileSpacing);
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   section.hero p {
     font-size: 3rem;
-    padding: var(--tabletSpacing2x) var(--tabletSpacing);
   }
 }
 
 @media screen and (min-width: 1024px) {
   section.hero p {
     font-size: 4rem;
-    padding: var(--desktopSpacing2x) var(--desktopSpacing);
+  }
+}
+
+/* #endregion */
+
+/* #region learning  */
+section.learning {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section.learning .item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  max-width: 24ch;
+  height: 350px;
+  margin: 1em;
+}
+
+section.learning .item p {
+  margin-top: 1em;
+}
+
+section.learning .item .image {
+  height: 150px;
+}
+section.learning .item .image img {
+  max-width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  section.learning .item {
+    width: 24ch;
+    margin: 2em;
   }
 }
 
@@ -233,14 +313,14 @@ section.hero p {
   text-decoration: none;
   font-weight: 400;
   color: var(--white);
-  background-color: var(--lightSeaGreen);
+  background-color: var(--teal);
   text-align: center;
   transition: all 0.2s;
   font-size: 1.2rem;
 }
 
 .btn a:hover {
-  background-color: var(--lightSeaGreen);
+  background-color: var(--teal);
   color: var(--black);
 }
 
@@ -284,7 +364,7 @@ section.hero p {
 .contribute-text-2,
 .event-session {
   background-color: var(--grey);
-  color: var(--blue);
+  color: var(--sherpaBlue);
 }
 
 .section-4,
@@ -292,14 +372,14 @@ section.hero p {
 .session-social-media,
 .contribute-text-3,
 .resources {
-  background-color: var(--lightSeaGreen);
+  background-color: var(--teal);
   color: var(--white);
 }
 
 .contribute-text-3 a {
   text-decoration: none;
   font-weight: bold;
-  color: var(--blue);
+  color: var(--sherpaBlue);
 }
 
 .contribute-text-3 a:hover {
@@ -308,7 +388,7 @@ section.hero p {
 
 .span,
 .team-icon {
-  color: var(--lightSeaGreen);
+  color: var(--teal);
   font-size: 1.5rem;
 }
 
@@ -432,11 +512,6 @@ footer {
   margin-left: 0.7em;
 }
 
-.learning-circuit p {
-  padding-left: 1em;
-  margin-bottom: 1.5em;
-}
-
 .team-content {
   padding: 1em 2em;
   margin-bottom: 1em;
@@ -467,16 +542,6 @@ footer {
 }
 
 /***Icons and Learning-Session***/
-#icon-learning {
-  max-width: 150px;
-}
-
-#icon-learning,
-.learning-circuit {
-  margin: 0 auto;
-  text-align: center;
-  padding-left: 2em;
-}
 
 /***Icons//Social Media***/
 .socials {
@@ -485,7 +550,7 @@ footer {
 }
 
 .socials i {
-  color: var(--lightSeaGreen);
+  color: var(--teal);
   font-size: 2.7rem;
   padding: 0.5em 0.3em 0 0;
 }
