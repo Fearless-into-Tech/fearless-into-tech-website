@@ -6,6 +6,7 @@
   --sherpaBlueLight: #0a5d76;
   --sherpaBlueDark: #073f50;
   --teal: #23b5b5;
+  --tealContrast: #002929;
   --grey: #f1f1f1;
   --blue: #104c90;
   --navHeight: 56px;
@@ -137,7 +138,7 @@ p {
 
 .teal {
   background-color: var(--teal);
-  color: var(--white);
+  color: var(--tealContrast);
 }
 
 .black {
