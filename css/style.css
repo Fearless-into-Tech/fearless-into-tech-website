@@ -258,6 +258,10 @@ section.hero p {
   }
 }
 
+#typed {
+  color: var(--white);
+}
+
 /* #endregion */
 
 /* #region learning  */
@@ -324,13 +328,7 @@ section.learning .item .image img {
   color: var(--black);
 }
 
-@media all and (max-width: 30em) {
-  a.btn {
-    display: block;
-    margin: 0.2em auto;
-  }
-}
-
+/*-------------------/***@MediaQuery on Header Session***-----------*/
 @media only screen and (max-width: 827px) {
   .mission,
   .team-content,
@@ -341,6 +339,14 @@ section.learning .item .image img {
   }
 }
 
+@media all and (max-width: 30em) {
+  a.btn {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+/*------------/Start***BackgroundColors and FontColours***-----------*/
 .section-1,
 .session-join-learning-circle,
 .events {
@@ -396,13 +402,6 @@ section.learning .item .image img {
   color: var(--sherpaBlue);
 }
 
-footer {
-  color: #1c1c1c;
-  padding: 3em 0em;
-}
-/*---------------------------------------------------*/
-
-/*---------------------------------------------------*/
 /*-------------------/***Images***-----------*/
 .about-2,
 .about-picture,
@@ -447,9 +446,7 @@ footer {
   text-align: center;
   margin-top: 2em;
 }
-/*---------------------------------------------------*/
 
-/*-----------------------------------------------*/
 /*-------------/***Padding and Margins***-----------*/
 .section-1,
 .section-2,
@@ -473,16 +470,15 @@ footer {
   padding: 6em 1em;
 }
 
-.contribute-text-1,
 .contribute-text-3,
-.resources-text {
-  padding: 6em 0 6em 1.5em;
-  margin: 0 auto;
-}
-
+.resources-text,
 .contribute-text-2,
 .learning-text {
-  padding: 3em 0 3em 1.5em;
+  padding: 5em 0 5em 1em;
+}
+
+.contribute-text-1 {
+  padding: 5em 1em;
 }
 
 .section-2,
@@ -536,24 +532,7 @@ footer {
   text-align: center;
 }
 
-/*Footer*/
-.footer {
-  padding: 3em 0 1em 0;
-}
-
 /***Icons and Learning-Session***/
-
-/***Icons//Social Media***/
-.socials {
-  box-sizing: border-box;
-  text-align: right;
-}
-
-.socials i {
-  color: var(--teal);
-  font-size: 2.7rem;
-  padding: 0.5em 0.3em 0 0;
-}
 
 /*---------Event Page/Social Media Section*****-----*/
 
@@ -602,16 +581,69 @@ footer {
   padding-top: 2em;
 }
 
-/*Footer*/
-.footer p {
-  font-size: 0.9rem;
+/*---------------------------------------------------*/
+/* #endregion */
+
+/* #region footer */
+footer {
+  color: #1c1c1c;
+  padding: var(--mobileSpacing2x) var(--mobileSpacing);
+  display: flex;
+  flex-direction: column;
 }
 
-.madebyleila {
-  font-size: 1rem;
-  text-align: center;
-  color: var(--strongGrey);
+footer .contact {
+  margin-bottom: var(--mobileSpacing);
 }
-/*---------------------------------------------------*/
+
+footer .contact h2 {
+  font-size: 2rem;
+}
+
+footer .contact p {
+  font-size: 1.15rem;
+}
+
+footer ul.social-media {
+  padding: 0;
+  margin: -0.6em;
+}
+
+footer ul.social-media li {
+  margin: 0.6em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--lightSeaGreen);
+}
+
+footer .social-media li a {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--sherpaBlue);
+}
+
+footer .social-media li a:hover {
+  color: var(--lightSeaGreen);
+}
+
+footer ul.social-media i {
+  font-size: 1.6rem;
+  width: 2.3rem;
+}
+
+@media only screen and (min-width: 780px) {
+  footer {
+    flex-direction: row;
+  }
+
+  footer ul.social-media {
+    margin: 0 4em 0 auto;
+  }
+}
 
 /* #endregion */
