@@ -573,38 +573,10 @@ footer ul.social-media i {
 
 @media only screen and (min-width: 780px) {
   footer {
-    display: flex;
     flex-direction: row;
-    padding-right: 0;
-  }
-
-  footer .contact p {
-    align-content: center;
-    justify-content: flex-start;
-    margin: 0;
-    width: 50%;
-    font-size: 1.5rem;
-  }
-
-  footer .social-media {
-    display: flex;
-    align-content: center;
-    width: 100%;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
   }
 
   footer ul.social-media {
-    display: flex;
-    margin-right: 1em;
-    padding-top: 2.6em;
-  }
-
-  footer .social-media ul li {
-    display: flex;
-    justify-content: flex-end;
-    align-content: center;
-    text-decoration: none;
+    margin: 0 4em 0 auto;
   }
 }
