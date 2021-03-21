@@ -34,6 +34,8 @@ body {
   --grey: #f1f1f1;
   --blue: #104c90;
   --navHeight: 56px;
+  --mobileSpacing: 2.1rem;
+  --mobileSpacing2x: 4.1rem;
 }
 
 /***************NAVBAR****************/
@@ -168,7 +170,6 @@ header {
   display: inline-block;
 }
 
-/*-----------------------Start----------------------------*/
 /*-------------------/***HEADER_BTN***-----------*/
 .btn-learn-more {
   padding: 3em 2em;
@@ -194,22 +195,9 @@ header {
   background-color: var(--lightSeaGreen);
   color: var(--black);
 }
-/*---------------------------------------------------*/
 
-/*-----------------------Start----------------------------*/
 /*-------------------/***@MediaQuery on Header Session***-----------*/
 @media only screen and (max-width: 827px) {
-  /* For mobile phones: */
-  [class="col-"] {
-    width: 90%;
-  }
-
-  i.fa.fa-bars {
-    display: inline;
-    margin: 2em auto;
-  }
-
-  /**********/
   .mission,
   .team-content,
   .resources {
@@ -243,9 +231,7 @@ header {
     margin: 0.2em auto;
   }
 }
-/*---------------------------/****End @MediaQuery****----------------*/
 
-/*-------------------------------------------------------------------*/
 /*------------/Start***BackgroundColors and FontColours***-----------*/
 .section-1,
 .session-join-learning-circle,
@@ -302,13 +288,6 @@ header {
   color: var(--sherpaBlue);
 }
 
-footer {
-  color: #1c1c1c;
-  padding: 3em 0em;
-}
-/*---------------------------------------------------*/
-
-/*---------------------------------------------------*/
 /*-------------------/***Images***-----------*/
 .about-2,
 .about-picture,
@@ -353,9 +332,7 @@ footer {
   text-align: center;
   margin-top: 2em;
 }
-/*---------------------------------------------------*/
 
-/*-----------------------------------------------*/
 /*-------------/***Padding and Margins***-----------*/
 .section-1,
 .section-2,
@@ -379,16 +356,15 @@ footer {
   padding: 6em 1em;
 }
 
-.contribute-text-1,
 .contribute-text-3,
-.resources-text {
-  padding: 6em 0 6em 1.5em;
-  margin: 0 auto;
-}
-
+.resources-text,
 .contribute-text-2,
 .learning-text {
-  padding: 3em 0 3em 1.5em;
+  padding: 5em 0 5em 1em;
+}
+
+.contribute-text-1 {
+  padding: 5em 1em;
 }
 
 .section-2,
@@ -447,11 +423,6 @@ footer {
   text-align: center;
 }
 
-/*Footer*/
-.footer {
-  padding: 3em 0 1em 0;
-}
-
 /***Icons and Learning-Session***/
 #icon-learning {
   max-width: 150px;
@@ -462,18 +433,6 @@ footer {
   margin: 0 auto;
   text-align: center;
   padding-left: 2em;
-}
-
-/***Icons//Social Media***/
-.socials {
-  box-sizing: border-box;
-  text-align: right;
-}
-
-.socials i {
-  color: var(--lightSeaGreen);
-  font-size: 2.7rem;
-  padding: 0.5em 0.3em 0 0;
 }
 
 /*---------Event Page/Social Media Section*****-----*/
@@ -555,18 +514,69 @@ p {
   padding-top: 2em;
 }
 
-/*Footer*/
-.footer p {
-  font-size: 0.9rem;
-}
-
-.madebyleila {
-  font-size: 1rem;
-  text-align: center;
-  color: var(--strongGrey);
-}
 /*---------------------------------------------------*/
 
 #typed {
   color: var(--white);
+}
+
+footer {
+  color: #1c1c1c;
+  padding: var(--mobileSpacing2x) var(--mobileSpacing);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .contact {
+  margin-bottom: var(--mobileSpacing);
+}
+
+footer .contact h2 {
+  font-size: 2rem;
+}
+
+footer .contact p {
+  font-size: 1.15rem;
+}
+
+footer ul.social-media {
+  padding: 0;
+  margin: -0.6em;
+}
+
+footer ul.social-media li {
+  margin: 0.6em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--lightSeaGreen);
+}
+
+footer .social-media li a {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--sherpaBlue);
+}
+
+footer .social-media li a:hover {
+  color: var(--lightSeaGreen);
+}
+
+footer ul.social-media i {
+  font-size: 1.6rem;
+  width: 2.3rem;
+}
+
+@media only screen and (min-width: 780px) {
+  footer {
+    flex-direction: row;
+  }
+
+  footer ul.social-media {
+    margin: 0 4em 0 auto;
+  }
 }
