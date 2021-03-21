@@ -1,0 +1,282 @@
+
+/* #region legacy */
+.btn-learn-more {
+    padding: 3em 2em;
+    text-align: left;
+  }
+  
+  .btn a {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    margin: 0 0.5em 0.5em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--teal);
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 1.2rem;
+  }
+  
+  .btn a:hover {
+    background-color: var(--teal);
+    color: var(--black);
+  }
+  
+  /*-------------------/***@MediaQuery on Header Session***-----------*/
+  @media only screen and (max-width: 827px) {
+    .mission,
+    .team-content,
+    .resources {
+      width: 90%;
+      padding-left: 1em;
+      margin: 0 auto;
+    }
+  }
+  
+  @media all and (max-width: 30em) {
+    a.btn {
+      display: block;
+      margin: 0.2em auto;
+    }
+  }
+  
+  /*------------/Start***BackgroundColors and FontColours***-----------*/
+  .section-1,
+  .session-join-learning-circle,
+  .events {
+    background-color: var(--sherpaBlue);
+    color: var(--white);
+  }
+  
+  .card {
+    background-color: var(--black);
+  }
+  
+  .section-2,
+  .section-6,
+  .contribute-text-1 {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  .section-3,
+  .section-9,
+  .contribute-text-2,
+  .event-session {
+    background-color: var(--grey);
+    color: var(--sherpaBlue);
+  }
+  
+  .section-4,
+  .session-approach,
+  .session-social-media,
+  .contribute-text-3,
+  .resources {
+    background-color: var(--teal);
+    color: var(--white);
+  }
+  
+  .contribute-text-3 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--sherpaBlue);
+  }
+  
+  .contribute-text-3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .span,
+  .team-icon {
+    color: var(--teal);
+    font-size: 1.5rem;
+  }
+  
+  .span::after {
+    color: var(--sherpaBlue);
+  }
+  
+  /*-------------------/***Images***-----------*/
+  .about-2,
+  .about-picture,
+  .circle-pic,
+  .contribute-picture-1,
+  .contribute-picture-2,
+  .contribute-picture-3 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  
+  .about-2 {
+    background-image: url(../images/pexels-canva-studio.png);
+  }
+  
+  .about-picture {
+    background-image: url(../images/coding-team-working-on-laptops.jpg);
+  }
+  
+  .circle-pic {
+    background-image: url(../images/christina-wocintechchat-com-FPQlXQtjkqU-unsplash.jpg);
+  }
+  
+  .contribute-picture-1 {
+    background-image: url(../images/pexels-ketut-subiyanto-4473903.jpg);
+  }
+  
+  .contribute-picture-2 {
+    background-image: url(../images/pexels-thisisengineering-3861964\ 2.png);
+  }
+  
+  .contribute-picture-3 {
+    background-image: url(../images/pexels-mentatdgt-1569076.jpg);
+  }
+  
+  /*Team Pictures*/
+  .pic {
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  /*-------------/***Padding and Margins***-----------*/
+  .section-1,
+  .section-2,
+  .section-6,
+  .section-9,
+  .section-5,
+  .mission,
+  .session-social-media,
+  .resources,
+  .session-approach,
+  .events {
+    padding: 6em 0.5em;
+    margin: 0 auto;
+  }
+  
+  .section-1 {
+    padding-left: 2em;
+  }
+  /*Icons => About Page*/
+  .session-learning {
+    padding: 6em 1em;
+  }
+  
+  .contribute-text-3,
+  .resources-text,
+  .contribute-text-2,
+  .learning-text {
+    padding: 5em 0 5em 1em;
+  }
+  
+  .contribute-text-1 {
+    padding: 5em 1em;
+  }
+  
+  .section-2,
+  .section-9 {
+    padding-top: 20%;
+    padding-left: 2em;
+  }
+  
+  .mission,
+  .approach,
+  .session-learning,
+  .session-social-media {
+    margin: 0 auto;
+  }
+  
+  .team-subtitle {
+    margin-top: 2em;
+    text-align: center;
+  }
+  
+  .resource-subtitle {
+    margin-left: 0.95em;
+  }
+  
+  .event-subtitle,
+  .subtitle {
+    margin-left: 0.7em;
+  }
+  
+  .team-content {
+    padding: 1em 2em;
+    margin-bottom: 1em;
+  }
+  
+  .team-session {
+    text-align: left;
+  }
+  
+  /*Event Page/Social Media Section*/
+  .session-social-media {
+    padding: 3em 1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .card,
+  .card-text,
+  .card-title {
+    margin: 2em auto;
+    padding: 0em 2em 0 2em;
+    text-align: center;
+  }
+  
+  /***Icons and Learning-Session***/
+  
+  /*---------Event Page/Social Media Section*****-----*/
+  
+  .session-social-media {
+    padding: 3em 1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .resources-social-media i {
+    color: var(--white);
+    font-size: 2.7rem;
+    padding-right: 0.5em;
+    margin-top: 1em;
+  }
+  
+  .resources-text p,
+  .event-text p {
+    text-align: center;
+  }
+  
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4,
+  .section-9,
+  .mission,
+  .session-social-media,
+  .resources,
+  .session-approach,
+  .events {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /*contribute page*/
+  .text {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  /*Event Page/Social Media Section*/
+  .session-social-media h6,
+  .resources-text h6 {
+    font-size: 2rem;
+    padding-top: 2em;
+  }
+  
+  /*---------------------------------------------------*/
+  /* #endregion */
