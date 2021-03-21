@@ -49,14 +49,29 @@ body {
   line-height: var(--lineHeight);
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 h2 {
   font-size: 3rem;
   font-weight: 600;
 }
 
+h1::after, 
+h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  border-bottom: 4pt solid;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
 h3 {
   font-size: 2rem;
-  padding-top: 1em;
+  margin-top: 1em;
   font-weight: 500;
 }
 
