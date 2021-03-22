@@ -1,0 +1,34 @@
+section.contribute {
+  display: flex;
+  flex-direction: column;
+}
+
+section.contribute:first-of-type {
+  padding-top: var(--navHeight);
+}
+
+/* #region resources */
+.resources-image {
+  background-image: url(../images/pexels-ketut-subiyanto-4473903.jpg);
+  width: 100vw;
+  height: 50vh;
+}
+
+/* #endregion */
+
+/* #region time */
+.time-image {
+  background-image: url(../images/pexels-thisisengineering-3861964\ 2.png);
+  width: 100vw;
+  height: 50vh;
+}
+
+/* #endregion */
+
+/* #region Knowlegde */
+.knowledge-image {
+  background-image: url(../images/pexels-mentatdgt-1569076.jpg);
+  width: 100vw;
+  height: 50vh;
+}
+/* #endregion */

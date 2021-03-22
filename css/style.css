@@ -51,16 +51,16 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.1rem;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.1rem;
   font-weight: 600;
 }
 
-h1::after, 
+h1::after,
 h2::after {
   content: "";
   display: block;
@@ -68,6 +68,13 @@ h2::after {
   border-bottom: 4pt solid;
   margin-top: 1rem;
   margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -94,7 +101,7 @@ p {
 }
 /* #endregion */
 
-/* #region globals: padded, colored utils */
+/* #region globals: padded, colored utils, images */
 .flex {
   display: flex;
   flex-direction: row;
@@ -144,6 +151,14 @@ p {
 .black {
   background-color: var(--black);
   color: var(--white);
+}
+
+.cover-image {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 /* #endregion */
 
