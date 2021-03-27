@@ -1,15 +1,17 @@
 :root {
   --white: #ffffff;
   --black: #1c1c1c;
+  --blackLink: #23b5b5;
   --strongGrey: #5e5d5d;
   --sherpaBlue: #084c61;
   --sherpaBlueLight: #0a5d76;
   --sherpaBlueDark: #073f50;
-  --sherpaBlueDarkLink: #2be1e1;
+  --sherpaBlueLink: #2be1e1;
   --teal: #23b5b5;
   --tealContrast: #002929;
   --grey: #f1f1f1;
   --blue: #104c90;
+  --darkLink: #0a5d76;
   --navHeight: 56px;
   --mobileSpacing: 2.1rem;
   --mobileSpacing2x: 4.2rem;
@@ -18,6 +20,7 @@
   --desktopSpacing: 8rem;
   --desktopSpacing2x: 8rem;
   --lineHeight: 1.6;
+  --contentWidth: 65ch;
   /* --breakpointPhone: 375px;
   --breakpointTablet: 768px;
   --breakpointDesktop: 1024px;
@@ -99,12 +102,24 @@ p {
   font-weight: 400;
   margin: 1em 0;
   padding: 0;
-  max-width: 65ch;
+  max-width: var(--contentWidth);
 }
 
 li {
   font-size: 1.2rem;
 }
+
+a {
+  color: var(--darkLink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover,
+a:active {
+  color: var(--sherpaBlueLink);
+}
+
 /* #endregion */
 
 /* #region globals: padded, colored utils, images */
@@ -150,18 +165,21 @@ li {
 }
 
 .sherpaBlueDark a {
-  font-weight: 700;
-  color: var(--sherpaBlueDarkLink);
-}
-
-.teal {
-  background-color: var(--teal);
-  color: var(--tealContrast);
+  color: var(--sherpaBlueLink);
 }
 
 .black {
   background-color: var(--black);
   color: var(--white);
+}
+
+.black a {
+  color: var(--blackLink);
+}
+
+.teal {
+  background-color: var(--teal);
+  color: var(--tealContrast);
 }
 
 .cover-image {
@@ -241,7 +259,6 @@ nav .menu ul li a {
   color: var(--black);
   font-weight: 700;
   text-transform: uppercase;
-  text-decoration: none;
   font-size: 1.1rem;
 }
 
@@ -318,7 +335,6 @@ footer ul.social-media li a {
   align-items: center;
   font-weight: 700;
   text-transform: uppercase;
-  text-decoration: none;
   font-size: 1rem;
   color: var(--sherpaBlue);
 }
