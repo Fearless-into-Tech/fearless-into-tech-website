@@ -5,6 +5,7 @@
   --sherpaBlue: #084c61;
   --sherpaBlueLight: #0a5d76;
   --sherpaBlueDark: #073f50;
+  --sherpaBlueDarkLink: #2be1e1;
   --teal: #23b5b5;
   --tealContrast: #002929;
   --grey: #f1f1f1;
@@ -141,6 +142,11 @@ p {
 .sherpaBlueDark {
   background-color: var(--sherpaBlueDark);
   color: var(--white);
+}
+
+.sherpaBlueDark a {
+  font-weight: 700;
+  color: var(--sherpaBlueDarkLink);
 }
 
 .teal {
