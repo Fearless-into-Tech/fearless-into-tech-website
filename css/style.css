@@ -181,6 +181,7 @@ nav {
   display: flex;
   align-content: center;
   height: var(--navHeight);
+  border-bottom: 1pt solid #f0f0f0;
 }
 
 nav img.logo {
