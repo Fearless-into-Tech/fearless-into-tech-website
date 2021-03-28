@@ -7,28 +7,20 @@ section.contribute:first-of-type {
   padding-top: var(--navHeight);
 }
 
-/* #region resources */
 .resources-image {
-  background-image: url(../images/pexels-ketut-subiyanto-4473903.jpg);
+  background-image: url(../images/contribute-resources.jpg);
   width: 100vw;
   height: 50vh;
 }
 
-/* #endregion */
-
-/* #region time */
 .time-image {
-  background-image: url(../images/pexels-thisisengineering-3861964\ 2.png);
+  background-image: url(../images/contribute-time.png);
   width: 100vw;
   height: 50vh;
 }
 
-/* #endregion */
-
-/* #region Knowlegde */
 .knowledge-image {
-  background-image: url(../images/pexels-mentatdgt-1569076.jpg);
+  background-image: url(../images/contribute-knowledge.jpg);
   width: 100vw;
   height: 50vh;
 }
-/* #endregion */
