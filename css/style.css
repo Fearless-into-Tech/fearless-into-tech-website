@@ -1,18 +1,41 @@
 :root {
   --white: #ffffff;
   --black: #1c1c1c;
-  --blackLink: #23b5b5;
-  --strongGrey: #5e5d5d;
-  --sherpaBlue: #084c61;
-  --sherpaBlueLight: #0a5d76;
-  --sherpaBlueDark: #073f50;
-  --sherpaBlueLink: #2be1e1;
-  --teal: #23b5b5;
+  --grey100: #f1f1f1;
+  --grey200: #afafaf;
+  --grey300: #5e5d5d;
+  --sherpaBlue100: #0097c5;
+  --sherpaBlue200: #0a5d76;
+  --sherpaBlue300: #084c61;
+  --sherpaBlue400: #073f50;
+  
+  --brand: #23b5b5;
+  --brandLight100: #2be1e1;
+  --brandLight200: #2ef5f5;
   --tealContrast: #002929;
-  --grey: #f1f1f1;
   --blue: #104c90;
-  --darkLink: #0a5d76;
+  
+  --link: var(--sherpaBlue200);
+  --linkHover: var(--sherpaBlue100);
+
+  --blackLink: var(--brand);
+  --blackLinkHover: var(--brandLight100);
+
+  --sherpaBlueLink: var(--brandLight100);
+  --sherpaBlueLinkHover: var(--brandLight200);
+
+  --navBackgroundColor: var(--white);
+  --navColor: var(--white);
+  --navLink: var(--black);
+  --navLinkHover: var(--brand);
   --navHeight: 56px;
+
+  --footerBackgroundColor: #161616;
+  --footerColor: var(--white);
+  --footerLink: var(--blackLink);
+  --footerLinkHover: var(--blackLinkHover);
+  
+  
   --mobileSpacing: 2.1rem;
   --mobileSpacing2x: 4.2rem;
   --tabletSpacing: 5rem;
@@ -110,14 +133,14 @@ li {
 }
 
 a {
-  color: var(--darkLink);
+  color: var(--link);
   text-decoration: none;
   font-weight: 700;
 }
 
 a:hover,
 a:active {
-  color: var(--sherpaBlueLink);
+  color: var(--linkHover);
 }
 
 /* #endregion */
@@ -150,22 +173,25 @@ a:active {
 }
 
 .sherpaBlue {
-  background-color: var(--sherpaBlue);
-  color: var(--white);
-}
-
-.sherpaBlueLight {
-  background-color: var(--sherpaBlueLight);
+  background-color: var(--sherpaBlue300);
   color: var(--white);
 }
 
 .sherpaBlueDark {
-  background-color: var(--sherpaBlueDark);
+  background-color: var(--sherpaBlue400);
   color: var(--white);
 }
 
+.sherpaBlue a,
 .sherpaBlueDark a {
   color: var(--sherpaBlueLink);
+}
+
+.sherpaBlue a:hover,
+.sherpaBlue a:active,
+.sherpaBlueDark a:hover,
+.sherpaBlueDark a:active {
+  color: var(--sherpaBlueLinkHover);
 }
 
 .black {
@@ -177,9 +203,17 @@ a:active {
   color: var(--blackLink);
 }
 
-.teal {
-  background-color: var(--teal);
-  color: var(--tealContrast);
+.black a:hover,
+.black a:active {
+  color: var(--blackLinkHover);
+}
+
+.muted {
+  color: var(--grey300);
+}
+
+.black .muted {
+  color: var(--grey200);
 }
 
 .cover-image {
@@ -194,7 +228,7 @@ a:active {
 /* #region nav */
 nav {
   position: fixed;
-  background-color: var(--white);
+  background-color: var(--navBackgroundColor);
   width: 100%;
   display: flex;
   align-content: center;
@@ -238,7 +272,7 @@ nav .menu {
 nav .menu.open {
   display: flex;
   position: fixed;
-  background-color: var(--white);
+  background-color: var(--navBackgroundColor);
   height: 100vh;
   width: 100vw;
   flex-direction: column;
@@ -256,7 +290,7 @@ nav .menu ul li {
 }
 
 nav .menu ul li a {
-  color: var(--black);
+  color: var(--navLink);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -264,7 +298,7 @@ nav .menu ul li a {
 
 nav .menu ul li a:hover,
 nav .menu ul li a.active {
-  color: var(--teal);
+  color: var(--navLinkHover);
 }
 
 @media only screen and (min-width: 780px) {
@@ -297,6 +331,8 @@ footer {
   padding: var(--mobileSpacing2x) var(--mobileSpacing);
   display: flex;
   justify-content: center;
+  background-color: var(--footerBackgroundColor);
+  color: var(--footerColor);
 }
 
 footer .content {
@@ -327,7 +363,6 @@ footer ul.social-media li {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--teal);
 }
 
 footer ul.social-media li a {
@@ -336,11 +371,11 @@ footer ul.social-media li a {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1rem;
-  color: var(--sherpaBlue);
+  color: var(--footerLink);
 }
 
 footer ul.social-media li a:hover {
-  color: var(--teal);
+  color: var(--footerLinkHover);
 }
 
 footer ul.social-media i {

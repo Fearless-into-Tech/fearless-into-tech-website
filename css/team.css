@@ -27,15 +27,10 @@ section.team:first-of-type {
   font-size: 1.6rem;
 }
 
-.member-header p.subtitle {
+.member-header p.muted {
   margin-top: 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--strongGrey);
-}
-
-.black .member-header p.subtitle {
-  color: #afafaf;
 }
 
 @media only screen and (min-width: 768px) {
