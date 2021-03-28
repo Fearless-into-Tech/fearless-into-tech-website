@@ -1,7 +1,34 @@
-section.team:first-of-type {
+/* #region who we are  */
+section.who-we-are {
   padding-top: var(--navHeight);
 }
 
+.who-we-are-image {
+  background-image: url(../images/who-we-are.png);
+}
+
+section.who-we-are .row {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 1024px) {
+  section.who-we-are .row {
+    flex-direction: row;
+  }
+
+  .who-we-are-image,
+  .col {
+    width: 50vw;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+}
+
+/* #endregion */
+
+/* #redion members */
 .member {
   margin-bottom: var(--mobileSpacing2x);
 }
@@ -44,7 +71,7 @@ section.team:first-of-type {
     width: var(--contentWidth);
     margin-bottom: var(--tabletSpacing2x);
   }
-  
+
   .member-image img {
     width: 200px;
     height: 200px;
@@ -53,9 +80,10 @@ section.team:first-of-type {
 }
 
 @media screen and (min-width: 1024px) {
-
   .member-image img {
     width: 250px;
     height: 250px;
   }
 }
+
+/* #endregion */
