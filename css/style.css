@@ -194,6 +194,11 @@ a:active {
   color: var(--sherpaBlueLinkHover);
 }
 
+.white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 .black {
   background-color: var(--black);
   color: var(--white);
