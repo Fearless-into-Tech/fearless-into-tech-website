@@ -35,6 +35,11 @@ section.hero p {
   color: var(--white);
 }
 
+.typed-cursor {
+  /* color: var(--white); */
+  display: none;
+}
+
 /* #endregion */
 
 /* #region learning  */
