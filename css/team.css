@@ -1,0 +1,92 @@
+/* #region who we are  */
+section.who-we-are {
+  padding-top: var(--navHeight);
+}
+
+.who-we-are-image {
+  background-image: url(../images/who-we-are.png);
+}
+
+section.who-we-are .row {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 1024px) {
+  section.who-we-are .row {
+    flex-direction: row;
+  }
+
+  .who-we-are-image,
+  .col {
+    width: 50vw;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+}
+
+/* #endregion */
+
+/* #redion members */
+.member {
+  margin-bottom: var(--mobileSpacing2x);
+}
+
+.member:last-of-type {
+  margin-bottom: 0;
+}
+
+.member-profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.member-image img {
+  border-radius: 50%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  width: 100px;
+  height: 100px;
+  margin-right: var(--mobileSpacing);
+}
+
+.member-header h3 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.member-header p.muted {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  section.members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: var(--contentWidth);
+    margin-bottom: var(--tabletSpacing2x);
+  }
+
+  .member-image img {
+    width: 200px;
+    height: 200px;
+    margin-right: var(--tabletSpacing);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .member-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* #endregion */

@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fearless into Tech</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -23,8 +31,7 @@
     />
     <!--Linking the HTML and CSS files-->
     <link rel="stylesheet" href="css/style.css" />
-    <title>Fearless Into Tech</title>
-    <link rel="icon" type="image/png" href="./images/FIT_Black.png" />
+    <link rel="stylesheet" href="css/legacy.css" />
   </head>
 
   <body>
@@ -38,9 +45,8 @@
       <div class="menu">
         <ul>
           <li><a href="./">Home</a></li>
-          <li><a href="./about.html">What we do</a></li>
           <li><a href="./team.html">Who we are</a></li>
-          <li><a href="./contribute.html">Contribute</a></li>
+          <li><a href="./contribute.html" class="active">Contribute</a></li>
         </ul>
       </div>
       <a href="#" class="hamburger">
@@ -138,43 +144,49 @@
       </div>
     </div>
     <footer>
-      <div class="contact">
-        <h2>Contact us</h2>
-        <p>fearlessintotech@gmail.com</p>
+      <div class="contact padded">
+        <div class="content">
+            <div class="email">
+              <h2>Contact us</h2>
+              <p>fearlessintotech@gmail.com</p>
+            </div>
+            <ul class="social-media">
+              <li>
+                <a href="https://www.facebook.com/fearlessintotech" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/fearless-into-tech" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/FearlessInto" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCXoOZM60GR0JsbEhCckKUHg" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+        </div>
       </div>
-      <ul class="social-media">
-        <li>
-          <a href="https://www.facebook.com/fearlessintotech" target="_blank">
-            <i class="fab fa-facebook"></i>
-            facebook
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/company/fearless-into-tech"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin"></i>
-            linkedin
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/FearlessInto" target="_blank">
-            <i class="fab fa-twitter"></i>
-            twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UCXoOZM60GR0JsbEhCckKUHg"
-            target="_blank"
-          >
-            <i class="fab fa-youtube"></i>
-            youtube
-          </a>
-        </li>
-      </ul>
+      <div class="imprint">
+        <div class="content">
+          <p>
+            Fearless into Tech is an officially registered voluntary association under Danish Law. <br />
+            CVR: <span class="cvr">41017295</span>
+          </p>
+          <p>
+            Fearless into Tech, does not take any responsibility for the content of linked pages.
+          </p>
+          <p>© 2021 by Fearless into Tech</p>
+        </div>
+      </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

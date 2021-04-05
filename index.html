@@ -1,119 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <!--Import Font Awesome-->
-    <script
-      src="https://kit.fontawesome.com/3a514e6805.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--Import Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <!--Linking the HTML and CSS files-->
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Fearless Into Tech</title>
-    <link rel="icon" type="image/png" href="./images/FIT_Black.png" />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fearless into Tech</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+  <!--Import Font Awesome-->
+  <script src="https://kit.fontawesome.com/3a514e6805.js" crossorigin="anonymous"></script>
+
+  <!--Import Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@600&display=swap"
+    rel="stylesheet" />
+  <!--Linking the HTML and CSS files-->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/logo.svg" height="32" alt="logo's fearless into tech" />
+    </div>
     <nav>
-      <img
-        class="logo"
-        src="./images/logo.svg"
-        height="32"
-        alt="logo's fearless into tech"
-      />
-      <div class="menu">
-        <ul>
-          <li><a href="./" class="active">Home</a></li>
-          <li><a href="./about.html">What we do</a></li>
-          <li><a href="./team.html">Who we are</a></li>
-          <li><a href="./contribute.html">Contribute</a></li>
-        </ul>
-      </div>
       <a href="#" class="hamburger">
         <div>
           <span></span>
           <span></span>
         </div>
       </a>
+      <div class="menu">
+        <ul>
+          <li><a href="./" class="active">Home</a></li>
+          <li><a href="./team.html">Who we are</a></li>
+          <li><a href="./contribute.html">Contribute</a></li>
+        </ul>
+      </div>
     </nav>
-    <header class="container-fluid">
-      <div class="hero-session">
-        <div class="row">
-          <div class="col-12 hero-heading haeding" id="typed-strings">
-            <h2 id="typed"></h2>
-          </div>
+  </header>
+  <section class="hero flex padded">
+    <div class="content">
+      <p id="typed"></p>
+    </div>
+  </section>
+  <section class="padded flex black">
+    <div class="content">
+      <h1>Fearless into Tech</h1>
+      <p>
+        A free community initiative from women to women. Fearless into Tech is
+        not a school. It is a decentralised, self-organised group of
+        self-learning women.
+      </p>
+      <h3>Clusters</h3>
+      <p>
+        Based on participants area of interest, clusters are formed. Within
+        each cluster, participants will be organized into small learning
+        circles of max. 5 participants.
+      </p>
+      <h3>Learning Circles</h3>
+      <p>
+        A learning circle is a participatory structure used within Fearless
+        into Tech. The objective is to build and share knowledge through a
+        process of open dialogue and deep reflection around concepts related
+        to software development.
+      </p>
+      <p>
+        Each circle agrees on its own curricula, meeting day, time and place,
+        and its monthly targets.
+      </p>
+      <h3>Volunteering tutors</h3>
+      <p>
+        Each month, volunteering tutors will be invited to provide input and
+        support to the learning circles.
+      </p>
+    </div>
+  </section>
+  <section class="learning flex">
+    <div class="row">
+      <div class="item">
+        <div class="image">
+          <img src="./images/meeting.png" alt="meeting's icon" />
         </div>
+        <p>Meetup weekly with your learning circle</p>
       </div>
-    </header>
-    <section>
-      <div class="container-fluid section-1">
-        <div class="row">
-          <div class="col-12 text-section-1">
-            <h2>Fearless Into Tech</h2>
-            <p>A free community initiative</p>
-            <p>from women to women</p>
-            <button class="btn btn-learn-more">
-              <a href="about.html">Learn More</a>
-            </button>
-          </div>
-          <div class="col-6 two"></div>
+      <div class="item">
+        <div class="image">
+          <img src="./images/calendar.png" alt="calendar's icon" />
         </div>
+        <p>Agree on meeting place and time</p>
       </div>
-    </section>
-    <footer>
-      <div class="contact">
-        <h2>Contact us</h2>
-        <p>fearlessintotech@gmail.com</p>
+    </div>
+    <div class="row">
+      <div class="item">
+        <div class="image">
+          <img src="./images/goals.png" alt="goals's icon" />
+        </div>
+        <p>Define your own learning goals</p>
       </div>
-      <ul class="social-media">
-        <li>
-          <a href="https://www.facebook.com/fearlessintotech" target="_blank">
-            <i class="fab fa-facebook"></i>
-            facebook
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/company/fearless-into-tech"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin"></i>
-            linkedin
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/FearlessInto" target="_blank">
-            <i class="fab fa-twitter"></i>
-            twitter
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UCXoOZM60GR0JsbEhCckKUHg"
-            target="_blank"
-          >
-            <i class="fab fa-youtube"></i>
-            youtube
-          </a>
-        </li>
+      <div class="item">
+        <div class="image">
+          <img src="./images/resource.png" alt="resource's icon" />
+        </div>
+        <p>Use recommended resources</p>
+      </div>
+    </div>
+  </section>
+  <section class="join-learning-circle flex padded black">
+    <div class="content">
+      <h2>Join our learning circles</h2>
+      <p>We currently have two clusters:</p>
+      <ul>
+        <li>Web Development</li>
+        <li>Data Science</li>
       </ul>
-    </footer>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  </body>
+      <p>
+        If you want to join an existing learning circle or create a new one,
+        contact us.
+      </p>
+    </div>
+    <div class="join-learning-circle-image"></div>
+  </section>
+  <footer>
+    <div class="contact padded">
+      <div class="content">
+          <div class="email">
+            <h2>Contact us</h2>
+            <p>fearlessintotech@gmail.com</p>
+          </div>
+          <ul class="social-media">
+            <li>
+              <a href="https://www.facebook.com/fearlessintotech" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/fearless-into-tech" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/FearlessInto" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCXoOZM60GR0JsbEhCckKUHg" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="imprint">
+      <div class="content">
+        <p>
+          Fearless into Tech is an officially registered voluntary association under Danish Law. <br />
+          CVR: <span class="cvr">41017295</span>
+        </p>
+        <p>
+          Fearless into Tech, does not take any responsibility for the content of linked pages.
+        </p>
+        <p>© 2021 by Fearless into Tech</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
 </html>

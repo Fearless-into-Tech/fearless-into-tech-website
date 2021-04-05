@@ -1,0 +1,45 @@
+section.contribute {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+section.contribute:first-of-type {
+  padding-top: var(--navHeight);
+}
+
+.image {
+  width: 100%;
+  height: 50vh;
+}
+
+.resources-image {
+  background-image: url(../images/contribute-resources.png);
+}
+
+.time-image {
+  background-image: url(../images/contribute-time.png);
+}
+
+.knowledge-image {
+  background-image: url(../images/contribute-knowledge.jpg);
+}
+
+@media screen and (min-width: 1024px) {
+  section.contribute {
+    flex-direction: row;
+  }
+
+  section.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .col {
+    width: 50vw;
+  }
+
+  .cover-image {
+    height: 150vh;
+  }
+
+}
