@@ -1,6 +1,7 @@
 :root {
   --white: #ffffff;
   --black: #1c1c1c;
+  --dark: #2b2b2b;
   --grey100: #f1f1f1;
   --grey200: #afafaf;
   --grey300: #5e5d5d;
@@ -8,18 +9,21 @@
   --sherpaBlue200: #0a5d76;
   --sherpaBlue300: #084c61;
   --sherpaBlue400: #073f50;
-  
+
   --brand: #23b5b5;
   --brandLight100: #2be1e1;
   --brandLight200: #2ef5f5;
   --tealContrast: #002929;
   --blue: #104c90;
-  
+
   --link: var(--sherpaBlue200);
   --linkHover: var(--sherpaBlue100);
 
   --blackLink: var(--brand);
   --blackLinkHover: var(--brandLight100);
+
+  --darkLink: var(--brand);
+  --darkLinkHover: var(--brandLight100);
 
   --sherpaBlueLink: var(--brandLight100);
   --sherpaBlueLinkHover: var(--brandLight200);
@@ -35,8 +39,7 @@
   --footerColor: var(--white);
   --footerLink: var(--blackLink);
   --footerLinkHover: var(--blackLinkHover);
-  
-  
+
   --mobileSpacing: 2.1rem;
   --mobileSpacing2x: 4.2rem;
   --tabletSpacing: 5rem;
@@ -44,14 +47,14 @@
   --desktopSpacing: 8rem;
   --desktopSpacing2x: 8rem;
   --lineHeight: 1.6;
-  --contentWidth: 65ch;
+  --contentWidth: 700px;
   /* --breakpointPhone: 375px;
   --breakpointTablet: 768px;
   --breakpointDesktop: 1024px;
   --breakpointDesktop2x: 1280px; */
 }
 
-/* #region globals: *, html, body, h1-6, p, section */
+/* #region globals: *, html, body, h1-6, p */
 *,
 *::before,
 *::after {
@@ -126,7 +129,6 @@ p {
   font-weight: 400;
   margin: 1em 0;
   padding: 0;
-  max-width: var(--contentWidth);
 }
 
 li {
@@ -158,10 +160,14 @@ a:active {
 }
 
 .padded .content {
-  width: 65ch;
+  max-width: var(--contentWidth);
 }
 
 @media screen and (min-width: 768px) {
+  .padded .content {
+    width: var(--contentWidth);
+  }
+
   .padded {
     padding: var(--tabletSpacing2x) var(--tabletSpacing);
   }
@@ -214,10 +220,25 @@ a:active {
   color: var(--blackLinkHover);
 }
 
+.dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.dark a {
+  color: var(--darkLink);
+}
+
+.dark a:hover,
+.dark a:active {
+  color: var(--darkLinkHover);
+}
+
 .muted {
   color: var(--grey300);
 }
 
+.dark .muted,
 .black .muted {
   color: var(--grey200);
 }
@@ -228,6 +249,7 @@ a:active {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 /* #endregion */
 
 /* #region nav */
@@ -339,45 +361,39 @@ header nav {
 /* #endregion */
 
 /* #region footer */
+
 footer {
-  padding: var(--mobileSpacing2x) var(--mobileSpacing);
-  display: flex;
-  justify-content: center;
   background-color: var(--footerBackgroundColor);
   color: var(--footerColor);
 }
 
-footer .content {
+.contact .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-footer .contact {
-  margin-bottom: var(--mobileSpacing);
-}
-
-footer .contact h2 {
+.contact .email h2 {
   font-size: 2rem;
 }
 
-footer .contact p {
+.contact .email p {
   font-size: 1.15rem;
 }
 
-footer ul.social-media {
+.contact ul.social-media {
   padding: 0;
   margin: -0.6em;
+  display: flex;
 }
 
-footer ul.social-media li {
+.contact ul.social-media li {
   margin: 0.6em;
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-footer ul.social-media li a {
+.contact ul.social-media li a {
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -386,22 +402,61 @@ footer ul.social-media li a {
   color: var(--footerLink);
 }
 
-footer ul.social-media li a:hover {
+.contact ul.social-media li a:hover {
   color: var(--footerLinkHover);
 }
 
-footer ul.social-media i {
-  font-size: 1.6rem;
+.contact ul.social-media i {
+  font-size: 1.8rem;
   width: 2.3rem;
 }
 
-@media only screen and (min-width: 780px) {
-  footer .content {
+@media only screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact .content {
+    display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    width: var(--contentWidth);
   }
 
-  footer ul.social-media {
+  .contact ul.social-media {
     margin: 0 4em 0 auto;
+  }
+}
+
+.imprint {
+  background-color: black;
+  padding: var(--mobileSpacing);
+}
+
+.imprint p {
+  font-size: 0.825rem;
+}
+
+.imprint .content {
+  max-width: var(--contentWidth);
+}
+
+@media screen and (min-width: 768px) {
+  .imprint {
+    padding: var(--mobileSpacing) var(--tabletSpacing);
+    display: flex;
+    justify-content: center;
+  }
+
+  .imprint .content {
+    width: var(--contentWidth);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .imprint {
+    padding: var(--mobileSpacing) var(--desktopSpacing);
   }
 }
 
