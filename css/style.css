@@ -24,11 +24,12 @@
   --sherpaBlueLink: var(--brandLight100);
   --sherpaBlueLinkHover: var(--brandLight200);
 
-  --navBackgroundColor: var(--white);
+  --navBackgroundColor: #0c0c0c;
   --navColor: var(--white);
-  --navLink: var(--black);
+  --navLink: var(--white);
   --navLinkHover: var(--brand);
   --navHeight: 56px;
+  --navBorderColor: #0d0d0d;
 
   --footerBackgroundColor: #161616;
   --footerColor: var(--white);
@@ -230,22 +231,29 @@ a:active {
 /* #endregion */
 
 /* #region nav */
-nav {
+header {
   position: fixed;
-  background-color: var(--navBackgroundColor);
+  z-index: 1;
   width: 100%;
+  background-color: var(--navBackgroundColor);
   display: flex;
   align-content: center;
   height: var(--navHeight);
-  border-bottom: 1pt solid #f0f0f0;
+  border-bottom: 1pt solid var(--navBorderColor);
 }
 
-nav img.logo {
-  z-index: 1;
+header .logo {
+  position: fixed;
+  z-index: 2;
   margin: 12px 24px;
 }
 
-nav .hamburger {
+header nav {
+  display: flex;
+  width: 100%;
+}
+
+.hamburger {
   z-index: 1;
   margin-left: auto;
   height: var(--navHeight);
@@ -257,23 +265,23 @@ nav .hamburger {
   right: 0;
 }
 
-nav .hamburger div span {
+.hamburger div span {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--black);
+  background-color: var(--navColor);
   margin: 4px;
 }
 
-nav .hamburger:hover div span:last-of-type {
+.hamburger:hover div span:last-of-type {
   width: 12px;
 }
 
-nav .menu {
+.menu {
   display: none;
 }
 
-nav .menu.open {
+.menu.open {
   display: flex;
   position: fixed;
   background-color: var(--navBackgroundColor);
@@ -284,24 +292,24 @@ nav .menu.open {
   align-items: center;
 }
 
-nav .menu ul {
+.menu ul {
   padding-left: 0;
   text-align: center;
 }
 
-nav .menu ul li {
+.menu ul li {
   margin: 1.2em;
 }
 
-nav .menu ul li a {
+.menu ul li a {
   color: var(--navLink);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.1rem;
 }
 
-nav .menu ul li a:hover,
-nav .menu ul li a.active {
+.menu ul li a:hover,
+.menu ul li a.active {
   color: var(--navLinkHover);
 }
 
