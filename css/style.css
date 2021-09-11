@@ -16,6 +16,11 @@
   --tealContrast: #002929;
   --blue: #104c90;
 
+  --callToActionBackground: var(--brand);
+  --callToActionColor: var(--black);
+  --callToActionBackgroundHover: var(--brandLight100);
+  --callToActionBackgroundActive: var(--brandLight200);
+
   --link: var(--sherpaBlue200);
   --linkHover: var(--sherpaBlue100);
 
@@ -356,6 +361,16 @@ header nav {
   nav .hamburger {
     display: none;
   }
+}
+nav ul li a.callToAction {
+  background-color: var(--callToActionBackground);
+  color: var(--callToActionColor);
+  padding: 0.2em 1em;
+}
+nav ul li a.callToAction:hover,
+nav ul li a.callToAction:active {
+  background-color: var(--callToActionBackgroundHover);
+  color: var(--callToActionColor);
 }
 
 /* #endregion */
