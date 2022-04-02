@@ -340,7 +340,7 @@ header nav {
   color: var(--navLinkHover);
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 925px) {
   nav .menu {
     display: flex;
     align-content: center;
