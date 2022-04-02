@@ -1,0 +1,35 @@
+article {
+  margin-bottom: 1em;
+}
+
+article .date {
+  background-color: #f5f5f5;
+  color: var(--brand);
+  font-size: 7em;
+  font-weight: 700;
+  font-style: italic;
+  display: flex;
+  align-content: flex-end;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 5rem 1rem 1rem;
+}
+
+article h3 {
+  margin-top: 1em;
+}
+article .link {
+  padding-top: 1em;
+}
+
+article a {
+  border: 2px solid var(--black);
+  color: var(--black);
+  padding: 1em 2em;
+}
+
+article a:hover,
+article a:active {
+  border: 2px solid var(--sherpaBlue400);
+  color: var(--sherpaBlue400);
+}
