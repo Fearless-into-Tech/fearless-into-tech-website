@@ -1,42 +1,60 @@
 /* #region hero */
 section.hero {
-  background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
-    url(../images/women-on-laptops-around-table.jpg);
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - var(--navHeight));
+  background-color: hsl(78deg 78% 89%);
+  background-image: linear-gradient(
+    320deg,
+    hsl(180deg 68% 42%) 0%,
+    hsl(175deg 47% 51%) 21%,
+    hsl(169deg 46% 58%) 30%,
+    hsl(162deg 46% 64%) 39%,
+    hsl(153deg 46% 70%) 46%,
+    hsl(141deg 46% 75%) 54%,
+    hsl(126deg 45% 80%) 61%,
+    hsl(108deg 51% 84%) 69%,
+    hsl(92deg 62% 86%) 79%,
+    hsl(78deg 78% 89%) 100%
+  );
+  /* background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
+    url(../images/women-on-laptops-around-table.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  min-height: calc(100vh - var(--navHeight));
   margin: var(--navHeight) auto 0;
-  align-items: flex-end;
-}
-
-section.hero p {
   display: flex;
   flex-direction: column;
-  color: var(--white);
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  width: 100%;
+  justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  section.hero p {
-    font-size: 3rem;
-  }
+section.hero p.content {
+  color: var(--darkGrey200);
+  font-size: 2rem;
+  font-weight: 600;
+  max-width: 100%;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  section.hero p {
-    font-size: 4rem;
+  section.hero {
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    height: calc(100vh - var(--navHeight));
+  }
+  section.hero p.content {
+    vertical-align: middle;
+    max-width: 50%;
+    margin-bottom: inherit;
+  }
+
+  section.hero .image {
+    width: 50%;
   }
 }
 
-#typed {
-  color: var(--white);
-}
-
-.typed-cursor {
-  display: none;
+@media screen and (min-width: 1200px) {
+  section.hero p.content {
+    font-size: 2.5rem;
+  }
 }
 
 /* #endregion */
