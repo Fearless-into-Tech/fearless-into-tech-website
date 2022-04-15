@@ -24,8 +24,9 @@ section.hero {
 
 section.hero p.content {
   color: var(--darkGrey200);
+  font-family: "Manrope", sans-serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   align-self: center;
   text-align: center;
   max-width: 100%;
