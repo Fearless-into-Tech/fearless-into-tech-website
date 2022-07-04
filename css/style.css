@@ -408,7 +408,7 @@ nav button.open svg line.line-bottom {
 .hero picture {
   display: flex;
   justify-content: center;
-  padding: var(--mobile-spacing) 0 0;
+  margin: 0 -20%;
 }
 
 @media screen and (min-width: 768px) {
@@ -416,10 +416,11 @@ nav button.open svg line.line-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 0;
   }
 
   .hero picture {
-    padding: 0 0 0 var(--mobile-spacing);
+    margin: 0 -5%;
   }
 }
 
