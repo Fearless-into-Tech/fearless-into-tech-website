@@ -69,8 +69,11 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="js/index.js"></script>
     <script defer src="js/nav.js"></script>
 
     <title>Fearless into Tech</title>
@@ -148,13 +151,14 @@
               class="btn btn-primary"
               href="https://forms.gle/83ndg9oWJRFH4rU8A"
               target="_blank"
+              data-aos="zoom-in"
             >
               Join a learning circle
             </a>
           </div>
 
           <div class="cards">
-            <div class="card card-learning-circle">
+            <div class="card card-learning-circle" data-aos="fade-up-left">
               <picture>
                 <img
                   src="./images/learning-circle.svg"
@@ -185,7 +189,7 @@
                 </li>
               </ul>
             </div>
-            <div class="card card-mentors" data-aos="">
+            <div class="card card-mentors" data-aos="fade-up">
               <picture>
                 <img
                   src="./images/mentorship.svg"
@@ -215,7 +219,7 @@
                 </li>
               </ul>
             </div>
-            <div class="card card-community" data-aos="">
+            <div class="card card-community" data-aos="fade-up-right">
               <picture>
                 <img
                   src="./images/community.svg"
@@ -252,7 +256,7 @@
               <h3>Learning paths</h3>
               <p>You can take one of the following paths:</p>
               <ul>
-                <li class="animate__animated animate__fadeInUp">
+                <li data-aos="fade-up-left">
                   <div class="icons">
                     <i class="fa-brands fa-python" aria-hidden="true"></i>
                   </div>
@@ -263,7 +267,7 @@
                     development and more.
                   </p>
                 </li>
-                <li class="animate__animated animate__fadeInUp">
+                <li data-aos="fade-up">
                   <div class="icons">
                     <i class="fa-brands fa-html5" aria-hidden="true"></i>
                     <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
@@ -275,7 +279,7 @@
                     style. JavaScript is the programming language of the web.
                   </p>
                 </li>
-                <li class="animate__animated animate__fadeInUp">
+                <li data-aos="fade-up-right">
                   <div class="icons">
                     <i class="fa-brands fa-unity" aria-hidden="true"></i>
                   </div>
@@ -291,7 +295,7 @@
         </div>
       </section>
       <section id="mentor" class="spaced">
-        <picture>
+        <picture data-aos="fade-up-right">
           <img
             src="./images/mentor.svg"
             alt="Programming illustration"
@@ -311,6 +315,7 @@
             class="btn btn-primary"
             href="https://forms.gle/7M1Fr7xETiiDPyMm7"
             target="_blank"
+            data-aos="zoom-in"
           >
             Become a mentor
           </a>
@@ -324,7 +329,7 @@
             <h2>Contact</h2>
             <p>fearlessintotech@gmail.com</p>
           </div>
-          <ul class="social-media">
+          <ul class="social-media" data-aos="slide-left">
             <li>
               <a
                 href="https://www.facebook.com/fearlessintotech"
