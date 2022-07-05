@@ -78,7 +78,7 @@
 
   <body>
     <header>
-      <div class="logo spaced" role="banner">
+      <div class="logo spaced">
         <h1 class="screen-reader-only">Fearless into Tech</h1>
         <picture>
           <img
@@ -90,19 +90,20 @@
       </div>
       <nav aria-labelledby="main-menu-label">
         <h2 id="main-menu-label" class="screen-reader-only">Main menu</h2>
-        <button href="#" aria-label="Toggle mobile menu">
+        <button href="#" aria-label="Toggle mobile menu" aria-controls="main-menu" aria-expanded="false">
           <svg width="32" height="32" viewBox="0 0 32 32">
             <line x1="0" y1="50%" x2="100%" y2="50%" class="line line-top" />
             <line x1="0" y1="50%" x2="100%" y2="50%" class="line line-bottom" />
           </svg>
         </button>
-        <ul class="menu spaced">
+        <ul id="main-menu" class="menu spaced">
           <li><a href="#learn-to-code">Learn to code</a></li>
           <li><a href="#mentor">Mentor</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <main>
     <section class="hero spaced">
       <div class="content">
         <h2>Empowering women to drive change in the tech sector</h2>
@@ -301,6 +302,7 @@
         </a>
       </div>
     </section>
+  </main>
     <footer>
       <div id="contact" class="contact flex spaced">
         <div class="content">

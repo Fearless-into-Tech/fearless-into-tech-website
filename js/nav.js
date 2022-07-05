@@ -1,31 +1,88 @@
-const header = document.querySelector("header");
+const body = document.querySelector("body");
 const menuButton = document.querySelector("nav button");
 const menu = document.querySelector(".menu");
 const menuAnchors = menu.querySelectorAll("a");
 
+const minWindowWidthForInlineMenu = 768;
+const minScrollYForVisibleMenuButton = 160;
+
+const isMenuOpen = () => menuButton.ariaExpanded === "true";
+
+const openMenu = () => {
+  body.style.overflow = "hidden";
+  menuButton.classList.add("open");
+  menuButton.ariaExpanded = "true";
+  menu.classList.add("open");
+};
+
+const closeMenu = () => {
+  body.style.overflow = "auto";
+  menuButton.classList.remove("open");
+  menuButton.ariaExpanded = "false";
+  menu.classList.remove("open");
+};
+
 menuButton.onclick = function () {
-  menuButton.classList.toggle("open");
-  menu.classList.toggle("open");
+  if (isMenuOpen()) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 };
 
 menuAnchors.forEach(function (anchor) {
   anchor.onclick = function () {
-    menuButton.classList.remove("open");
-    menu.classList.remove("open");
+    closeMenu();
   };
 });
 
+const handleKeydownEventsWhenMenuIsOpen = function (event) {
+  if (!isMenuOpen()) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closeMenu();
+    return;
+  }
+
+  // Trap focus within the menu
+  if (event.key === "Tab") {
+    const focusedElement = document.activeElement;
+    const firstFocusableElement = menuButton;
+    const lastFocusableElement = menuAnchors[menuAnchors.length - 1];
+
+    if (event.shiftKey && focusedElement === firstFocusableElement) {
+      lastFocusableElement.focus();
+      event.preventDefault();
+      return;
+    }
+
+    if (!event.shiftKey && focusedElement === lastFocusableElement) {
+      firstFocusableElement.focus();
+      event.preventDefault();
+      return;
+    }
+  }
+};
+document.addEventListener("keydown", handleKeydownEventsWhenMenuIsOpen);
+
 const toggleMenuButtonVisibilityOnScroll = function () {
-  if (window.scrollY >= 160) {
-    header.classList.add("with-nav-button");
+  if (window.scrollY >= minScrollYForVisibleMenuButton) {
     menuButton.classList.add("show");
   } else {
-    header.classList.remove("with-nav-button");
     menuButton.classList.remove("show");
-    menuButton.classList.remove("open");
-    menu.classList.remove("open");
-
+    closeMenu();
   }
 };
 
-window.addEventListener("scroll", toggleMenuButtonVisibilityOnScroll);
+document.addEventListener("scroll", toggleMenuButtonVisibilityOnScroll);
+
+window.addEventListener("resize", function () {
+  if (
+    window.innerWidth >= minWindowWidthForInlineMenu &&
+    window.scrollY < minScrollYForVisibleMenuButton
+  ) {
+    closeMenu();
+  }
+});
